@@ -1,21 +1,26 @@
+import AttachFile from '@mui/icons-material/AttachFile';
+import InsertEmoticon from '@mui/icons-material/InsertEmoticon';
+import Mic from '@mui/icons-material/Mic';
+import MoreVert from '@mui/icons-material/MoreVert';
+import Send from '@mui/icons-material/Send';
+import IconButton from '@mui/material/IconButton';
+import { addDoc, collection, doc, serverTimestamp, setDoc } from 'firebase/firestore';
+import { useRouter } from 'next/router';
+import { KeyboardEventHandler, MouseEventHandler, useRef, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollection } from 'react-firebase-hooks/firestore';
 import styled from 'styled-components';
+
 import { Props } from '../../pages/conversations/[id]';
+import { auth, db } from '../config/firebase';
 import { useRecipient } from '../hooks/useRecipient';
-import RecipientAvatar from './RecipientAvatar';
 import {
   convertFirestoreTimestampToString,
   generateQueryGetMessages,
   transformMessage,
 } from '../utils/getMessagesInConversation';
-import { IconButton } from '@mui/material';
-import { AttachFile, InsertEmoticon, Mic, MoreVert, Send } from '@mui/icons-material';
-import { useRouter } from 'next/router';
-import { useCollection } from 'react-firebase-hooks/firestore';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth, db } from '../config/firebase';
 import Message from './Message';
-import { KeyboardEventHandler, useState, useRef, MouseEventHandler } from 'react';
-import { addDoc, collection, doc, serverTimestamp, setDoc } from 'firebase/firestore';
+import RecipientAvatar from './RecipientAvatar';
 
 const StyledRecipientHeader = styled.div`
   position: sticky;

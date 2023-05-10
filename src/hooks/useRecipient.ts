@@ -1,9 +1,10 @@
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { AppUser, Conversation } from '../types';
-import { auth, db } from '../config/firebase';
-import { getRecipientEmail } from '../utils/getRecipientEmail';
 import { collection, query, where } from 'firebase/firestore';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollection } from 'react-firebase-hooks/firestore';
+
+import { auth, db } from '../config/firebase';
+import { AppUser, Conversation } from '../types';
+import { getRecipientEmail } from '../utils/getRecipientEmail';
 
 export const useRecipient = (conversationUsers: Conversation['users']) => {
   const [loggedInUser, _loading, _error] = useAuthState(auth);

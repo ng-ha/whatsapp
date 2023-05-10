@@ -1,7 +1,7 @@
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { IMessage } from '../types';
-import { auth } from '../config/firebase';
 import styled from 'styled-components';
+import { auth } from '../config/firebase';
+import { IMessage } from '../types';
 
 const StyledMessage = styled.p`
   width: fit-content;

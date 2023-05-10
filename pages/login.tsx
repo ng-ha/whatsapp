@@ -1,8 +1,9 @@
-import { Button } from '@mui/material';
+import Button from '@mui/material/Button';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import styled from 'styled-components';
+
 import WhatsAppLogo from '../assets/whatsapplogo.png';
 import { auth } from '../src/config/firebase';
 

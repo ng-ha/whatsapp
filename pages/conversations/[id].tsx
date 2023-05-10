@@ -1,17 +1,18 @@
-import Head from 'next/head';
-import styled from 'styled-components';
-import Sidebar from '../../src/components/Sidebar';
-import { GetServerSideProps } from 'next';
-import { auth, db } from '../../src/config/firebase';
 import { doc, getDoc, getDocs } from 'firebase/firestore';
-import { Conversation, IMessage } from '../../src/types';
-import { getRecipientEmail } from '../../src/utils/getRecipientEmail';
+import { GetServerSideProps } from 'next';
+import Head from 'next/head';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import styled from 'styled-components';
+
+import ConversationScreen from '../../src/components/ConversationScreen';
+import Sidebar from '../../src/components/Sidebar';
+import { auth, db } from '../../src/config/firebase';
+import { Conversation, IMessage } from '../../src/types';
 import {
   generateQueryGetMessages,
   transformMessage,
 } from '../../src/utils/getMessagesInConversation';
-import ConversationScreen from '../../src/components/ConversationScreen';
+import { getRecipientEmail } from '../../src/utils/getRecipientEmail';
 
 export interface Props {
   conversation: Conversation;

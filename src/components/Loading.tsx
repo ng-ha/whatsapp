@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import Image from 'next/image';
-import WhatsAppLogo from '../../assets/whatsapplogo.png';
 import CircularProgress from '@mui/material/CircularProgress';
+import Image from 'next/image';
+import styled from 'styled-components';
+import WhatsAppLogo from '../../assets/whatsapplogo.png';
 
 const StyledContainer = styled.div`
   display: flex;

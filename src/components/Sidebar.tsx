@@ -1,15 +1,16 @@
-import { Chat, Logout, MoreVert, Search } from '@mui/icons-material';
-import {
-  Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  TextField,
-} from '@mui/material';
+import Chat from '@mui/icons-material/Chat';
+import Logout from '@mui/icons-material/Logout';
+import MoreVert from '@mui/icons-material/MoreVert';
+import Search from '@mui/icons-material/Search';
 import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 import IconButton from '@mui/material/IconButton';
+import TextField from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
 import * as EmailValidator from 'email-validator';
 import { signOut } from 'firebase/auth';
