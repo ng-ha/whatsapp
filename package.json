@@ -22,6 +22,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-firebase-hooks": "^5.1.1",
+    "sharp": "^0.32.1",
     "styled-components": "^6.0.0-rc.1"
   },
   "devDependencies": {
